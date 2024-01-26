@@ -476,4 +476,5 @@ composer.lock
 # env
 .env
 mysql/
-
+.idea
+.idea/php.xml
