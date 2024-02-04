@@ -4,7 +4,7 @@
 echo '-------------------------------------------------------------------------' . PHP_EOL;
 $min = 1;
 $max = 10;
-function printRangeNumbers($min, $max): void {
+function printRangeNumbers(int $min, int $max): void {
     while ($min <= $max) {
         echo $min . ($min === $max ? PHP_EOL : ', ');
         $min++;
@@ -35,7 +35,7 @@ echo '-------------------------------------------------------------------------'
 #3
 $minEven = 1;
 $maxEven = 20;
-function printEvenNumbers($minEven, $maxEven): void
+function printEvenNumbers(int $minEven, int $maxEven): void
 {
     while ($minEven <= $maxEven) {
         if ($minEven % 2 === 0) {
