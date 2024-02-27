@@ -5,14 +5,7 @@ services:
     build: ./
     volumes:
       - ./:/var/www/html/
+      - ./xdebug.ini:/usr/local/etc/php/conf.d/xdebug.ini
+
     ports:
       - "8080:80"
-#  mysql:
-#    image: mysql:8
-#    ports:
-#      - "3308:3308"
-#    volumes:
-#      - ./mysql:/var/lib/mysql
-#    # задаем пароль для root пользователя
-#    environment:
-#      MYSQL_ROOT_PASSWORD: 0000
