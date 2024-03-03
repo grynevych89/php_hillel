@@ -6,6 +6,8 @@ trait Validator
 
     public function validate(array $data, array $schema): void
     {
+        $this->errors = null; // Очищаємо попередні помилки перед перевіркою нових даних
+
         foreach ($schema as $field => $rules) {
             if (!isset($data[$field])) {
                 if (str_contains($rules, 'required')) {

@@ -6,14 +6,13 @@ class UserController
 
     public function update(array $data): void
     {
-        $this->validate($data, USER_VALIDATION_SCHEMA);
+        $schema = USER_VALIDATION_SCHEMA; // Використовуємо схему для оновлення користувача
+        $this->validate($data, $schema);
     }
 
     public function delete(int $id): void
     {
-        $schema = [
-            'id' => 'int|required',
-        ];
+        $schema = ID_VALIDATION_SCHEMA; // Використовуємо схему для видалення
         $this->validate(['id' => $id], $schema);
     }
 }
